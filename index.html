@@ -6,45 +6,62 @@
     <title>Spotify Web</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Flow+Circular&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/89082768ea.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="page-container">
-        <div class="main-container">
-            <div class="side-bar">
+        <main class="main-container">
+            <section class="side-bar">
 
-            </div>
-            <div class="music-section">
+            </section>
+            <section class="music-section">
 
-            </div>
-        </div>
-        <div class="player-container debug">
+            </section>
+        </main>
+        <section class="player-container">
             <div class="left-player-section">
                 <div class="playing-song-img">
-                    <div><button>testo</button></div>
+                    <figure>
+                        <img src="./img/sinister.jpeg" alt="">
+                    </figure>
                 </div>
                 <div class="playing-song-id">
-                    <div><button>testo</button></div>
+                    <strong class="movie-name">Sinister</strong>
+                    <span class="song-name">Brano Nome</span>
                 </div>
                 <div class="playing-song-cta">
-                    <div><button>testo</button></div>
+                    <button><i class="fa-regular fa-heart"></i></button>
+                    <button><i class="fa-regular fa-folder-closed"></i></button>
                 </div>
             </div>
-            <div class="main-player">
-                <div class="main-player-actions"><button>testo</button></div>
-                <div class="main-player-buffering"><button>testo</button></div>
-            </div>
+            <section class="main-player">
+                <div class="main-player-actions">
+                    <button class="main-player-button"><i class="fa-solid fa-shuffle"></i></button>
+                    <button class="main-player-button"><i class="fa-solid fa-backward-step"></i></button>
+                    <button class="main-player-button play"><i class="fa-regular fa-circle-play"></i></button>
+                    <button class="main-player-button"><i class="fa-solid fa-forward-step"></i></button>
+                    <button class="main-player-button"><i class="fa-solid fa-rotate-right"></i></button>
+                </div>
+                <div class="main-player-buffering">
+                    <span class="song-min-time">0.25</span>
+                    <div class="main-player buffer-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <span class="song-max-time">4.35</span>
+                </div>
+                        
+            </section>
             <div class="reproducing-cta">
-                <button>testo</button>
-                <button>testo</button>
-                <button>testo</button>
-                <div class="reproducing-buffer">
-                    <button>testo</button>
+                <button><i class="fa-solid fa-list"></i></button>
+                <button><i class="fa-solid fa-display"></i></button>
+                <button><i class="fa-solid fa-volume-high"></i></button>
+                <div class="reproducing buffer-bar">
+                    <div class="progress"></div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 </body>
 </html>

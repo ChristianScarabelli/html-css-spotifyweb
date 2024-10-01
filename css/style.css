@@ -16,7 +16,9 @@
 }
 
 html {
-	font-family: "Flow Circular", system-ui;
+	font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
 }
 
 a {
@@ -40,18 +42,20 @@ img {
 	margin: 0 auto;
     display: flex;
     flex-direction: column;
+    /* overflow-x: hidden; */
+    width: 100%;
 }
 
 .main-container {
 	width: 100%;
 	margin: 0 auto;
     display: flex;
-    flex-grow: 1;
+    flex-grow: 2;
 } 
 
 .side-bar {
     min-width: 230px;
-    flex-shrink: 1;
+    flex-shrink: 2;
     background-color: var(--black);
 }
 
@@ -89,6 +93,23 @@ img {
 	width: 20%;
 }
 
+h1 {
+    font-size: 20px;
+    color: var(--white);
+}
+
+h2 {
+    font-size: 12px;
+    color: var(--white);
+}
+
+button {
+    border: none;
+    background: none;
+    color: var(--light-grey);
+    margin: 5px;
+}
+
 /* PLAYER SECTION  */
 
 .main-player {
@@ -100,7 +121,104 @@ img {
 
 .left-player-section {
     display: flex;
+    align-items: center;
+    gap: 15px;
 }
+
+.playing-song-img img{
+    display: block;
+    max-width: 40px;
+}
+
+.playing-song-id {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-player-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.playing-song-cta {
+    margin: 0px 20px 0px 20px;
+}
+
+.movie-name {
+    color: var(--white);
+}
+
+.song-name {
+    color: var(--light-grey);
+}
+
+.reproducing-cta {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.main-player-button {
+    font-size: 20px;
+    color: var(--white);
+}
+
+.main-player-button.play {
+    font-size: 30px;
+    padding: 0px 10px 0px 10px;
+}
+
+/* BUFFER BAR GENERAL  */
+.buffer-bar {  
+    background-color: var(--light-grey); 
+    border-radius: 10px; 
+}
+
+.progress {
+    height: 100%; 
+    border: 2px solid var(--white); 
+    background-color: var(--white);
+    border-radius: 10px;  
+}
+
+/* MAIN PLAYER BUFFERRING BAR  */
+.main-player-buffering {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.main-player.buffer-bar {
+    display: block;
+    flex-grow: 2;
+}
+
+.main-player .progress { 
+    width: 20%;
+} 
+
+.song-min-time {
+    color: var(--white);
+}
+
+.song-max-time {
+    margin-left: 10px;
+    color: var(--white);
+}
+
+/* RIGHT SIDE BUFFERING BAR  */
+.reproducing.buffer-bar {
+    width: 100px;  
+}
+
+.reproducing .progress {
+    width: 20%; 
+}
+
 
 /* DEBUG  */
 
