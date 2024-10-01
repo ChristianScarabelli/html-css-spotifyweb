@@ -64,7 +64,11 @@ img {
     width: 100%;
     margin: 0 auto;
     height: 90px;
+    padding: 10px;
     background-color: var(--dark-grey);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .row {
@@ -85,10 +89,28 @@ img {
 	width: 20%;
 }
 
+/* PLAYER SECTION  */
+
+.main-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 50%;
+}
+
+.left-player-section {
+    display: flex;
+}
+
 /* DEBUG  */
 
 .debug.page-container > * {
     border: 2px solid var(--black);
+}
+
+.debug.player-container > *  {
+    border: 2px solid var(--white);
+    color: white;
 }
 
 /* MEDIA QUERIES DESKTOP FIRST  */
@@ -110,7 +132,9 @@ img {
 
 /* X-Small devices */
 @media (max-width: 575.98px) {
-	
+	.side-bar {
+        min-width: 50px;
+    }
 }
 
 
