@@ -1,6 +1,10 @@
 :root {
-	--color: ;
-	
+	--white: white;
+	--black: black;
+    --dark-grey: #282828;
+    --light-grey: #5A5A5A;
+    --light-black: #080B12;
+    --blacky-blue: #141922;
 }
 
 /* RESET RULES  */
@@ -12,11 +16,7 @@
 }
 
 html {
-	font-family: ;
-}
-
-body {
-	
+	font-family: "Flow Circular", system-ui;
 }
 
 a {
@@ -35,14 +35,36 @@ img {
 
 /* LAYOUT */
 
-.container-fluid {
-	max-width: 100%;
+.page-container {
+	height: 100vh;
 	margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
-.container {
-	max-width: 1460px;
+.main-container {
+	width: 100%;
 	margin: 0 auto;
+    display: flex;
+    flex-grow: 1;
+} 
+
+.side-bar {
+    min-width: 230px;
+    flex-shrink: 1;
+    background-color: var(--black);
+}
+
+.music-section {
+    width: 100%;
+    background-color: var(--blacky-blue);
+}
+
+.player-container {
+    width: 100%;
+    margin: 0 auto;
+    height: 90px;
+    background-color: var(--dark-grey);
 }
 
 .row {
@@ -65,7 +87,9 @@ img {
 
 /* DEBUG  */
 
-
+.debug.page-container > * {
+    border: 2px solid var(--black);
+}
 
 /* MEDIA QUERIES DESKTOP FIRST  */
 
