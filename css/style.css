@@ -83,12 +83,8 @@ img {
 .row {
 	display: flex;
 	flex-wrap: wrap;
+    padding: 0px 10px;
 }
-
-/* .row > * {
-	padding: 0px 12px;
-} */
-
 
 .col-12 {
 	width: 100%;
@@ -180,13 +176,9 @@ button {
 }
 
 /* Music content  */
-.recently-played .row {
-    padding: 0px 10px;
-} 
-
 .card-header,
 .card-body {
-    padding: 0px 10px;
+    padding: 0px 10px 20px 10px;
 }
 
 .card-body {
@@ -197,6 +189,10 @@ button {
     gap: 10px;
 }
 
+.suggestions h1,
+.popular h1 {
+    padding: 20px 20px 40px 20px;
+}
 
 
 
@@ -478,7 +474,7 @@ button {
 }
 
 .main-player-button.play:hover {
-    font-size: 35px;
+    transform: scale(1.2);
 }
 
 .buffer-bar:hover {
