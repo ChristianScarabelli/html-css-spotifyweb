@@ -66,6 +66,8 @@ img {
 .music-section {
     background-color: var(--blacky-blue);
     flex-grow: 1;
+    overflow-y: auto;
+    z-index: -1; 
 }
 
 .player-container {
@@ -112,6 +114,37 @@ button {
     color: var(--light-grey);
     /* margin: 5px; */
 }
+
+/* MAIN  */
+
+/* upgrade bar  */
+
+.upgrade-bar {
+    background-color: var(--light-black);
+    color: var(--white);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.upgrade-bar-button {
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 999px;
+    font-size: 12px;
+    line-height: 24px;
+    padding: 15px 40px;
+    margin-right: 10px;   /*  */
+}
+
+
+
+
+
+
+
+
 
 /* SIDEBAR  */
 
@@ -363,17 +396,42 @@ button {
     width: 20%; 
 }
 
+/* HOVER  */
 
-/* DEBUG  */
-
-.debug.page-container > * {
-    border: 2px solid var(--black);
+/* sidebar  */
+.side-bar span:hover {
+    color: var(--white);
+}
+.side-bar.add-playlist .plus-cube:hover {
+    color: var(--white);
+}
+.side-bar ul > li:hover {
+    color: var(--white);
 }
 
-.debug.player-container > *  {
-    border: 2px solid var(--white);
-    color: white;
+.side-bar .download a:hover {
+    color: var(--white);
 }
+
+/* player  */
+
+.song-name:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.playing-song-cta button:hover {
+    color: var(--white);
+}
+
+.main-player-button.play:hover {
+    font-size: 35px;
+}
+
+.buffer-bar:hover {
+    
+}
+
 
 /* MEDIA QUERIES DESKTOP FIRST  */
 
@@ -451,9 +509,21 @@ button {
     }
 }
 
+/* DEBUG  */
 
+.debug.page-container > * {
+    border: 2px solid var(--black);
+}
 
+.debug.player-container > *  {
+    border: 2px solid var(--white);
+    color: white;
+}
 
+.debug.page-container .music-section > * {
+    border: 2px solid white;
+    min-height: 100px;
+}
 
 
 
