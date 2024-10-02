@@ -115,11 +115,25 @@ button {
 
 /* SIDEBAR  */
 
+.border-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 30px;
+    width: 3px;
+    background-color: var(--brand-color);
+}
+
 .side-bar {
     display: flex;
     flex-flow: column;
-    padding: 20px;
     gap: 25px;
+    /* padding: 20px; */
+}
+
+.side-bar-logo {
+    /*  */
+    padding: 20px 20px 0px 20px;
 }
 
 .side-bar-logo .logo-full {
@@ -130,6 +144,9 @@ button {
 .side-bar-index {
     color: var(--light-grey);
     gap: 15px;
+    position: relative;
+    /*  */
+    padding: 0px 20px 0px 20px;
 }
 
 .side-bar-index img {
@@ -144,6 +161,12 @@ button {
 
 .home {
     color: var(--white);
+}
+
+.add-playlist,
+.side-bar-playlist {
+    /*  */
+    padding: 0px 20px 0px 20px;
 }
 
 .add-playlist h2 {
@@ -171,6 +194,8 @@ button {
 
 .profile { 
     margin-top: auto;
+    /*  */
+    padding: 0px 20px 20px 20px;
 }
 
 .profile h2 {
@@ -378,16 +403,39 @@ button {
     }
     
     .side-bar {
-        padding: 20px 10px;
+        /* padding: 20px 10px; */
         gap: 15px;
+    }
+
+    .profile { 
+        /*  */
+        padding: 0px 10px 10px 10px;
+    }
+
+    .add-playlist,
+    .side-bar-playlist {
+     /*  */
+    padding: 0px 10px 0px 10px;
+    }
+
+    .side-bar-logo {
+        /*  */
+        padding: 10px 10px 0px 10px;
+    }
+    
+    .side-bar-index {
+        /*  */
+        padding: 0px 10px 0px 10px;
     }
 
     .side-bar-logo .logo-full,
     .add-playlist,
+    .side-bar-index span,
     .side-bar-playlist,
     .install-app,
     .profile hr,
-    .user-name h2 {
+    .user-name h2,
+    .border-left  {
         display: none;
     }
 
