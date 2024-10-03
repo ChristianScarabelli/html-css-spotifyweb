@@ -134,51 +134,55 @@ button {
     border-radius: 999px;
     font-size: 12px;
     line-height: 24px;
-    /* transition: transform 0.3s ease; */
+    transition: transform 0.3s ease;
     padding: 10px 40px;
     margin-right: 20px;   /*  */
 }
 
 /* Button  */
-.upper-button .row .col-12 {
+.upper-button .row {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
-    position: relative;
+    /*  */
     padding: 20px;
 }
 
-.upper-button .row .col-12 a {
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.upper-button-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
     padding-bottom: 10px;
-}
-
-.recently-played h1 {
-    padding: 0px 20px 40px 20px;
-}
-
-.evidence {
     position: relative;
 }
 
-.border-bottom-up-button {
+.upper-button-item.active::before,
+.upper-button-item:hover::before {
+    content: '';
     position: absolute;
-    bottom: 0;
-    left: 30%;
+    top: 100%;
+    transform: translatex(50%);
     height: 3px;
-    width: 40px;
+    width: 50px;
     background-color: var(--brand-color);
-    margin-top: 5px;
-}
+} 
+
+.upper-button-item > a {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+} 
+
+
 
 /* Music content  */
+.recently-played h1 {
+    padding: 0px 20px 40px 20px;
+}
 .card-header,
 .card-body {
-    padding: 0px 10px 20px 10px;
+    padding: 10px;
 }
 
 .card-body {
@@ -189,23 +193,24 @@ button {
     gap: 10px;
 }
 
+.music-section-content .row {
+    margin-top: 20px;
+}
+
 .suggestions h1,
 .popular h1 {
     padding: 20px 20px 40px 20px;
 }
 
+.card-subtitle {
+    padding: 20px 20px 20px 20px;
+}
 
+.popular img {
+    border-radius: 50%;
+}
 
 /* SIDEBAR  */
-
-.border-left {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 30px;
-    width: 3px;
-    background-color: var(--brand-color);
-}
 
 .side-bar {
     display: flex;
@@ -224,11 +229,32 @@ button {
     height: 40px;
 }
 
+.logo-small {
+    display: none;
+}
+
 .side-bar-index {
     color: var(--light-grey);
     gap: 15px;
+}
+
+.index-menu-item {
     position: relative;
-    /*  */
+}
+
+.index-menu-item.active::before,
+.index-menu-item:hover::before {
+	position: absolute;
+	content: '';
+	display: block;
+	height: 100%;
+	width: 3px;
+	top: 0;
+	left: 0;
+	background-color: var(--brand-color);
+}
+
+.index-menu-item a {
     padding: 0px 20px 0px 20px;
 }
 
@@ -452,9 +478,14 @@ button {
 .side-bar span:hover {
     color: var(--white);
 }
-.side-bar.add-playlist .plus-cube:hover {
+.plus-cube:hover {
+    background-color: var(--white);
+} 
+
+.add-playlist-button:hover {
     color: var(--white);
 }
+
 .side-bar ul > li:hover {
     color: var(--white);
 }
@@ -483,10 +514,10 @@ button {
 
 /* main  */
 .upgrade-bar-button:hover {
-    /* transform: scale(1.4); */
+    transform: scale(1.1);
 }
 
-.upper-button .row .col-12 a:hover {
+.upper-button-item > a:hover {
     color: var(--white);
 }
 
@@ -522,31 +553,27 @@ button {
     /* SIDEBAR  */
 	.side-bar {
         width: 50px;
-    }
-    
-    .side-bar {
-        /* padding: 20px 10px; */
         gap: 15px;
     }
-
+    
     .profile { 
-        /*  */
         padding: 0px 10px 10px 10px;
     }
 
     .add-playlist,
     .side-bar-playlist {
-     /*  */
     padding: 0px 10px 0px 10px;
     }
 
+    .logo-small {
+        display: block;
+    }
+
     .side-bar-logo {
-        /*  */
         padding: 10px 10px 0px 10px;
     }
-    
-    .side-bar-index {
-        /*  */
+
+    .index-menu-item a {
         padding: 0px 10px 0px 10px;
     }
 
@@ -557,7 +584,8 @@ button {
     .install-app,
     .profile hr,
     .user-name h2,
-    .border-left  {
+    .index-menu-item.active::before,
+    .index-menu-item:hover::before {
         display: none;
     }
 
@@ -571,6 +599,9 @@ button {
         flex-direction: column;
         gap: 20px;
     }
+
+    .user-name {
+        gap: 0px;
 }
 
 /* DEBUG  */
