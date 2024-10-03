@@ -42,19 +42,15 @@ img {
 
 .page-container {
 	height: 100vh;
-	margin: 0 auto;
     display: flex;
     flex-direction: column;
-    /* overflow-x: hidden; */
-    /* width: 100%; */
 }
 
 .main-container {
-	width: 100%;
-	margin: 0 auto;
     display: flex;
     flex-grow: 1;
-    /* overflow-x: hidden; */
+    overflow-y: hidden;
+    height: calc(100% - 90px);
 } 
 
 .side-bar {
@@ -67,12 +63,13 @@ img {
     background-color: var(--blacky-blue);
     flex-grow: 1;
     overflow-x: auto;
-    /* z-index: -1;  */
+    position: relative;
+    padding-top: 100px;
 }
 
 .player-container {
+    height: 90px;
     width: 100%;
-    margin: 0 auto;
     padding: 10px 0px;
     background-color: var(--dark-grey);
     display: flex;
@@ -92,10 +89,6 @@ img {
 
 .col-2 {
     width: calc(2 * 100% / 12);
-}
-
-.row.row-cols-5 > * {
-	width: 20%;
 }
 
 h1 {
@@ -125,6 +118,10 @@ button {
     justify-content: flex-end;
     align-items: center;
     padding: 20px 0px 30px 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .upgrade-bar-button {
@@ -177,6 +174,13 @@ button {
 
 
 /* Music content  */
+.music-section-content {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+
+}
+
 .recently-played h1 {
     padding: 0px 20px 40px 20px;
 }
@@ -426,6 +430,7 @@ button {
     border-radius: 10px; 
     width: 120px;
     flex-grow: 1;
+    cursor: pointer;
 }
 
 .progress {
@@ -433,6 +438,12 @@ button {
     border: 2px solid var(--white); 
     background-color: var(--white);
     border-radius: 10px;  
+    cursor: pointer;
+}
+
+
+.buffer-bar:hover .progress {
+    border-color: var(--brand-color);
 }
 
 /* MAIN PLAYER BUFFERRING BAR  */
@@ -446,8 +457,6 @@ button {
 
 .main-player.buffer-bar {
     display: block;
-    /* width: 120px;
-    flex-grow: 1; */
 }
 
 .main-player .progress { 
@@ -540,17 +549,20 @@ button {
 /* Medium devices  */
 @media (max-width: 991.98px) { 
 
+
 }
 
 /* Small devices */
 @media (max-width: 767.98px) {
+    .music-section-content .col-2 {
+        width: 160px;
+    }
 
 }
 
 /* X-Small devices */
 @media (max-width: 575.98px) {
 
-    /* SIDEBAR  */
 	.side-bar {
         width: 50px;
         gap: 15px;
@@ -600,8 +612,9 @@ button {
         gap: 20px;
     }
 
-    .user-name {
-        gap: 0px;
+    .music-section-content .col-2 {
+        width: 250px;
+    }
 }
 
 /* DEBUG  */
