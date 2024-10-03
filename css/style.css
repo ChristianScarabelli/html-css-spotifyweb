@@ -439,11 +439,19 @@ button {
     background-color: var(--white);
     border-radius: 10px;  
     cursor: pointer;
+    position: relative;
 }
 
-
-.buffer-bar:hover .progress {
-    border-color: var(--brand-color);
+.progress-dot {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: var(--white);
+    transform: translatey(-50%);
+    right: -10%;
+    visibility: hidden; 
+    opacity: 0; 
 }
 
 /* MAIN PLAYER BUFFERRING BAR  */
@@ -517,8 +525,14 @@ button {
     transform: scale(1.2);
 }
 
-.buffer-bar:hover {
-    
+
+.buffer-bar:hover .progress {
+    border-color: var(--brand-color);
+}
+
+.buffer-bar:hover .progress-dot {
+    visibility: visible;
+    opacity: 1;  
 }
 
 /* main  */
