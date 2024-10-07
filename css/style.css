@@ -161,7 +161,7 @@ button {
     top: 100%;
     transform: translatex(50%);
     height: 3px;
-    width: 50px;
+    width: 40px;
     background-color: var(--brand-color);
 } 
 
@@ -191,6 +191,11 @@ button {
     align-items: center;
     gap: 10px;
     margin-top: 10px;
+}
+
+.card-header {
+    object-fit: cover;
+    object-position: center;
 }
 
 .track-card {
